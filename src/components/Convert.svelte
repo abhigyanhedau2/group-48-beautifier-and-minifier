@@ -62,7 +62,7 @@
 <div class="container">
   <p>Beautified HTML code:</p>
   <div>
-    <i class="fa-regular fa-clipboard" />
+    <i class="fa-regular fa-copy"></i>
     <textarea readonly bind:value={outputText} rows={5} cols={50} />
   </div>
 </div>
