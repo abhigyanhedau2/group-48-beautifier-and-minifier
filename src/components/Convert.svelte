@@ -44,6 +44,10 @@
     console.log("minify " + language);
     outputText = inputText.replace(/\s+/g, "");
   };
+  const htmlMinifier = () => {
+    console.log("minify html");
+    
+  };
   const clearInputTextBox = () => {
     console.log("clear input text box");
     inputText = "";
