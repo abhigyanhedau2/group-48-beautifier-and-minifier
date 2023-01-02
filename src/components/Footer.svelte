@@ -1,5 +1,7 @@
 <script></script>
 
-<footer>Footer</footer>
+<footer>
+  <p>Beautifier and Minifier - Group 48</p>
+</footer>
 
 <style></style>

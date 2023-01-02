@@ -1,5 +1,11 @@
 <script></script>
 
-<div>Card</div>
+<div class="card-wrapper">
+  <slot />
+</div>
 
-<style></style>
+<style>
+  .card-wrapper {
+    border: 1px solid black;
+  }
+</style>

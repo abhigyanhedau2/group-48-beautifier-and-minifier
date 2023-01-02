@@ -3,15 +3,25 @@
   import Footer from "./components/Footer.svelte";
   import Header from "./components/Header.svelte";
   import Home from "./components/Home.svelte";
-  let activePage = "Home"; // Two pages home or convert
+  let activePage = "Home"; // Two pages - home or convert
+  let language = undefined; // Language - html, css, js, json, xml
+  const changePageHandler = (event) => {
+    activePage = activePage === "Home" ? "Convert" : "Home";
+    language = event.detail;
+  };
 </script>
 
-<Header />
 <main>
   {#if activePage === "Home"}
-    <Home />
+    <Header heading="Beautify and Minify Tools" />
+    <Home on:changePage={changePageHandler} />
   {:else}
-    <Convert />
+    <Header
+      hasHomeBtn
+      heading={`${language.toUpperCase()} Beautifier and Minifier`}
+      on:changePage={changePageHandler}
+    />
+    <Convert {language} />
   {/if}
 </main>
 <Footer />
