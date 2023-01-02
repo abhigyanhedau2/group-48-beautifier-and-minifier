@@ -14,6 +14,7 @@
   };
   const jsonBeautifier = () => {
     console.log("beatify json");
+    outputText = JSON.stringify(JSON.parse(inputText), null, 2);
   };
   const xmlBeautifier = () => {
     console.log("beatify xml");
@@ -41,9 +42,12 @@
   };
   const minifier = () => {
     console.log("minify " + language);
+    outputText = inputText.replace(/\s+/g, "");
   };
   const clearInputTextBox = () => {
     console.log("clear input text box");
+    inputText = "";
+    outputText = "";
   };
 </script>
 
