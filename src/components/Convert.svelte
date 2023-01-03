@@ -18,6 +18,15 @@
   };
   const xmlBeautifier = () => {
     console.log("beatify xml");
+    var formatted = "";
+    var indent = "";
+    var tab = "\t";
+    inputText.split(/>\s*</).forEach(function (node) {
+      if (node.match(/^\/\w/)) indent = indent.substring(tab.length); // decrease indent by one 'tab'
+      formatted += indent + "<" + node + ">\r\n";
+      if (node.match(/^<?\w[^>]*[^\/]$/)) indent += tab; // increase indent
+    });
+    outputText = formatted.substring(1, formatted.length - 3);
   };
   const beautifier = () => {
     switch (language) {
@@ -46,7 +55,6 @@
   };
   const htmlMinifier = () => {
     console.log("minify html");
-    
   };
   const clearInputTextBox = () => {
     console.log("clear input text box");
