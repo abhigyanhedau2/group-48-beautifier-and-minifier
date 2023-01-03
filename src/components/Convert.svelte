@@ -72,12 +72,21 @@
     inputText = "";
     outputText = "";
   };
+
+  const pasteInput = async () => {
+    inputText = await navigator.clipboard.readText();
+  };
+
+  const copyOutput = async () => {
+    navigator.clipboard.writeText(outputText);
+  };
 </script>
 
 <div class="container">
   <p>Enter your {language.toUpperCase()} code:</p>
   <div>
-    <i class="fa-regular fa-clipboard" />
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <i on:click={pasteInput} class="fa-regular fa-clipboard" />
     <textarea bind:value={inputText} rows={5} cols={50} />
   </div>
 </div>
@@ -89,7 +98,8 @@
 <div class="container">
   <p>Beautified HTML code:</p>
   <div>
-    <i class="fa-regular fa-copy" />
+    <!-- svelte-ignore a11y-click-events-have-key-events -->
+    <i on:click={copyOutput} class="fa-regular fa-copy" />
     <textarea readonly bind:value={outputText} rows={5} cols={50} />
   </div>
 </div>
