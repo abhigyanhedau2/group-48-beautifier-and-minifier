@@ -5,6 +5,7 @@
   export let language = undefined;
   let inputText = "";
   let outputText = "";
+
   const htmlBeautifier = () => {
     console.log("beatify html");
     var formatted = "";
@@ -17,21 +18,26 @@
     });
     outputText = formatted.substring(1, formatted.length - 3);
   };
+
   const cssBeautifier = () => {
     console.log("beatify css");
   };
+
   const jsBeautifier = () => {
     console.log("beatify js");
     outputText = js_beautify(inputText, { indent_size: 2 });
   };
+
   const jsonBeautifier = () => {
     console.log("beatify json");
     outputText = JSON.stringify(JSON.parse(inputText), null, 2);
   };
+
   const xmlBeautifier = () => {
     console.log("beatify xml");
     htmlBeautifier();
   };
+
   const beautifier = () => {
     switch (language) {
       case "html":
@@ -53,10 +59,12 @@
         break;
     }
   };
+
   const minifier = () => {
     console.log("minify " + language);
     outputText = inputText.replace(/\s+/g, "");
   };
+
   const clearInputTextBox = () => {
     console.log("clear input text box");
     inputText = "";
