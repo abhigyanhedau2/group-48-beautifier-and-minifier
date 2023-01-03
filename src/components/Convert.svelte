@@ -1,5 +1,7 @@
 <script>
   import Button from "./Button.svelte";
+  import js_beautify from "js-beautify";
+
   export let language = undefined;
   let inputText = "";
   let outputText = "";
@@ -20,6 +22,7 @@
   };
   const jsBeautifier = () => {
     console.log("beatify js");
+    outputText = js_beautify(inputText, { indent_size: 2 });
   };
   const jsonBeautifier = () => {
     console.log("beatify json");
