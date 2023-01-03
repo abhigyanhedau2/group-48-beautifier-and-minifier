@@ -1,6 +1,7 @@
 <script>
   import Button from "./Button.svelte";
   import js_beautify from "js-beautify";
+  import cssbeautify from "cssbeautify";
 
   export let language = undefined;
   let inputText = "";
@@ -21,6 +22,7 @@
 
   const cssBeautifier = () => {
     console.log("beatify css");
+    outputText = cssbeautify(inputText, { autosemicolon: true });
   };
 
   const jsBeautifier = () => {
@@ -87,7 +89,7 @@
 <div class="container">
   <p>Beautified HTML code:</p>
   <div>
-    <i class="fa-regular fa-copy"></i>
+    <i class="fa-regular fa-copy" />
     <textarea readonly bind:value={outputText} rows={5} cols={50} />
   </div>
 </div>
