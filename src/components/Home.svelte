@@ -107,6 +107,7 @@ img{
 }
 body {
   font-family: 'Inter', sans-serif; /* Apply the Inter font to the body element */
+  
 }
 label{
   display:flex;

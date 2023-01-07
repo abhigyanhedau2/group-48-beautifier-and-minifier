@@ -1,7 +1,8 @@
 <script></script>
 
-<div>
-  <h1>About Us:</h1>
+<body>
+<div id="about">
+  <h1 style="margin-bottom: 30px">About Us</h1>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, autem
     assumenda. Quaerat dolores consequatur soluta ab quod pariatur debitis
@@ -15,5 +16,12 @@
     Quo perferendis vero adipisci necessitatibus inventore, provident itaque?
   </p>
 </div>
+</body>
 
-<style></style>
+<style>
+body{
+    font-family: 'Inter', sans-serif;
+}
+#about{
+    margin: 60px;}
+</style>

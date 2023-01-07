@@ -82,26 +82,67 @@
   };
 </script>
 
-<div class="container">
-  <p>Enter your {language.toUpperCase()} code:</p>
-  <div>
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <i on:click={pasteInput} class="fa-regular fa-clipboard" />
-    <textarea bind:value={inputText} rows={5} cols={50} />
+<body>
+<div id="d1">
+  <div class="container box">
+    
+  <div class="container box">
+    <p>Enter your that code:</p>
+    <div>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <i on:click={pasteInput} class="fa-regular fa-clipboard" />
+      <textarea bind:value={inputText} rows={5} cols={50} ></textarea>
+    </div>
   </div>
-</div>
-<div class="btnGroup">
-  <Button on:clickEvent={beautifier.bind(null, language)}>Beautify</Button>
-  <Button on:clickEvent={minifier}>Minify</Button>
-  <Button on:clickEvent={clearInputTextBox}>Clear</Button>
-</div>
-<div class="container">
-  <p>Beautified HTML code:</p>
-  <div>
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <i on:click={copyOutput} class="fa-regular fa-copy" />
-    <textarea readonly bind:value={outputText} rows={5} cols={50} />
+  <div class="btnGroup box">
+    <Button on:clickEvent={beautifier.bind(null, language)}>Beautify</Button>
+    <Button on:clickEvent={minifier}>Minify</Button>
+    <Button on:clickEvent={clearInputTextBox}>Clear</Button>
   </div>
+  
+  <div class="container box">
+    <p>Output code:</p>
+    <div>
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <i on:click={copyOutput} class="fa-regular fa-copy" />
+      <textarea readonly bind:value={outputText} rows={5} cols={50} />
+    </div>
+  </div>
+  
 </div>
-
-<style></style>
+</div>
+</body>
+<style>
+  body{
+    font-family: 'Inter',sans-serif;
+    
+  }
+  #d1{
+   display: flex;
+   flex-wrap: wrap;
+    width: 100%;
+    margin-right: 0;
+    justify-content: center;
+  }
+  .container{
+   justify-content: center;
+  }
+  .btnGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+}
+  textarea{
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    resize: none;
+    height: 450px;
+    width: 400px;
+  }
+  .box{
+  float: left;
+  }
+</style>
