@@ -26,5 +26,22 @@
   transform: scale(1.1);
   z-index:3;
 }
+.secondary{
+  width: 100px;
+  margin: 20px 40px;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  border: 1px solid #D8D8DA;
+  font-size: 16px;
+  padding: 8px 14px;
+  height: auto;
+  transition: 1s;
+  }
+.secondary:hover{
+  transform: scale(1.1);
+  z-index:3;
+}
+
 
 </style>

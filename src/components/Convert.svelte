@@ -90,21 +90,21 @@
     <p>Enter your that code:</p>
     <div>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <i on:click={pasteInput} class="fa-regular fa-clipboard" />
+      <i on:click={pasteInput} class="fa-regular fa-clipboard fa-lg" />
       <textarea bind:value={inputText} rows={5} cols={50} ></textarea>
     </div>
   </div>
   <div class="btnGroup box">
     <Button on:clickEvent={beautifier.bind(null, language)}>Beautify</Button>
     <Button on:clickEvent={minifier}>Minify</Button>
-    <Button on:clickEvent={clearInputTextBox}>Clear</Button>
+    <Button on:clickEvent={clearInputTextBox} type="secondary">Clear</Button>
   </div>
   
   <div class="container box">
     <p>Output code:</p>
     <div>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <i on:click={copyOutput} class="fa-regular fa-copy" />
+      <i on:click={copyOutput} class="fa-regular fa-copy fa-lg" />
       <textarea readonly bind:value={outputText} rows={5} cols={50} />
     </div>
   </div>
@@ -144,5 +144,11 @@
   }
   .box{
   float: left;
+  }
+  i{
+    
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 370px;
   }
 </style>

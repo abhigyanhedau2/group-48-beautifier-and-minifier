@@ -31,6 +31,7 @@
     margin-right: -8px;
   }
   i{
+    
     align-items: flex-start;
   }
 </style>

@@ -17,7 +17,7 @@
   footer{
     margin-top:60px;
     background-color: #0066FF;
-    position: absolute;
+    
     width:100%;
     margin-left:-10px;
   }
