@@ -85,9 +85,8 @@
 <body>
 <div id="d1">
   <div class="container box">
-    
   <div class="container box">
-    <p>Enter your that code:</p>
+    <p>Enter your code:</p>
     <div>
       <!-- svelte-ignore a11y-click-events-have-key-events -->
       <i on:click={pasteInput} class="fa-regular fa-clipboard fa-lg" />
