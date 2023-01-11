@@ -12,7 +12,6 @@
 <style>
 .primary{
   width: 100px;
-  margin: 20px 40px;
   background-color: #0066ff;
   color: white;
   border-radius: 8px;
@@ -21,6 +20,8 @@
   padding: 8px 14px;
   height: auto;
   transition: 1s;
+  cursor: pointer;
+  margin-top: 1rem;
   }
 .primary:hover{
   transform: scale(1.1);
@@ -28,7 +29,6 @@
 }
 .secondary{
   width: 100px;
-  margin: 20px 40px;
   background-color: white;
   color: black;
   border-radius: 8px;
@@ -37,6 +37,8 @@
   padding: 8px 14px;
   height: auto;
   transition: 1s;
+  cursor: pointer;
+  margin-top: 1rem;
   }
 .secondary:hover{
   transform: scale(1.1);

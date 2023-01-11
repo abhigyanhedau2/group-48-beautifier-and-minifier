@@ -82,72 +82,121 @@
   };
 </script>
 
-<body>
 <div id="d1">
   <div class="container box">
-  <div class="container box">
-    <p>Enter your code:</p>
-    <div>
-      <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <i on:click={pasteInput} class="fa-regular fa-clipboard fa-lg" />
-      <textarea bind:value={inputText} rows={5} cols={50} ></textarea>
+    <div class="container">
+      <p>Enter your code:</p>
+      <div class="text-area">
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <i on:click={pasteInput} class="fa-regular fa-clipboard fa-lg" />
+        <textarea bind:value={inputText} rows={5} cols={50} />
+      </div>
+    </div>
+    <div class="btnGroup">
+      <Button on:clickEvent={beautifier.bind(null, language)}>Beautify</Button>
+      <Button on:clickEvent={minifier}>Minify</Button>
+      <Button on:clickEvent={clearInputTextBox} type="secondary">Clear</Button>
+    </div>
+
+    <div class="container">
+      <p>Output code:</p>
+      <div class="text-area">
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
+        <i on:click={copyOutput} class="fa-regular fa-copy fa-lg" />
+        <textarea readonly bind:value={outputText} rows={5} cols={50} />
+      </div>
     </div>
   </div>
-  <div class="btnGroup box">
-    <Button on:clickEvent={beautifier.bind(null, language)}>Beautify</Button>
-    <Button on:clickEvent={minifier}>Minify</Button>
-    <Button on:clickEvent={clearInputTextBox} type="secondary">Clear</Button>
-  </div>
-  
-  <div class="container box">
-    <p>Output code:</p>
-    <div>
-      <!-- svelte-ignore a11y-click-events-have-key-events -->
-      <i on:click={copyOutput} class="fa-regular fa-copy fa-lg" />
-      <textarea readonly bind:value={outputText} rows={5} cols={50} />
-    </div>
-  </div>
-  
 </div>
-</div>
-</body>
+
 <style>
-  body{
-    font-family: 'Inter',sans-serif;
-    
-  }
-  #d1{
-   display: flex;
-   flex-wrap: wrap;
+  #d1 {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     margin-right: 0;
     justify-content: center;
   }
-  .container{
-   justify-content: center;
+  .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   .btnGroup {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 4rem;
+    /* gap: 1rem; */
+    justify-content: space-evenly;
+  }
+  /* .container {
+    justify-content: center;
+  } */
+  /* .btnGroup {
     display: flex;
     flex-direction: column;
     margin-bottom: 0px;
     justify-content: center;
     align-items: center;
     margin-top: 15%;
-}
-  textarea{
+  } */
+  textarea {
     background-color: #f6f6f6;
     border-radius: 8px;
     resize: none;
-    height: 450px;
-    width: 400px;
+    height: 70vh;
+    width: 35vw;
   }
-  .box{
-  float: left;
+  .text-area {
+    position: relative;
   }
-  i{
-    
+  i {
     position: absolute;
-    margin-top: 18px;
-    margin-left: 370px;
+    right: 1rem;
+    top: 1.5rem;
+    cursor: pointer;
+  }
+  .container p {
+    font-weight: 500;
+  }
+  @media only screen and (max-width: 1000px) {
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .btnGroup {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    textarea {
+      background-color: #f6f6f6;
+      border-radius: 8px;
+      resize: none;
+      height: 70vh;
+      width: 70vw;
+    }
+  }
+  @media only screen and (max-width: 750px) {
+    textarea {
+      background-color: #f6f6f6;
+      border-radius: 8px;
+      resize: none;
+      height: 70vh;
+      width: 80vw;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    textarea {
+      background-color: #f6f6f6;
+      border-radius: 8px;
+      resize: none;
+      height: 70vh;
+      width: 90vw;
+    }
   }
 </style>
