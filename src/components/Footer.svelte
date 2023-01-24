@@ -1,24 +1,23 @@
 <script></script>
 
-<body>
 <footer>
-  <p>Beautifier and Minifier - Group 48 </p>
+  <p>Beautifier and Minifier - Group 48</p>
 </footer>
-</body>
 
 <style>
-  body {
-  font-family: 'Inter', sans-serif;
-  }
-  p{
+  p {
     text-align: center;
     color: white;
   }
-  footer{
-    margin-top:60px;
-    background-color: #0066FF;
-    
-    width:100%;
-    margin-left:-10px;
+  footer {
+    position: absolute;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0066ff;
+    height: 10rem;
+    width: 100%;
+    margin-left: -10px;
   }
 </style>

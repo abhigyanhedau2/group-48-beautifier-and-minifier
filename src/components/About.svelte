@@ -1,6 +1,5 @@
 <script></script>
 
-<body>
 <div id="about">
   <h1 style="margin-bottom: 30px">About Us</h1>
   <p>
@@ -16,12 +15,8 @@
     Quo perferendis vero adipisci necessitatibus inventore, provident itaque?
   </p>
 </div>
-</body>
 
 <style>
-body{
-    font-family: 'Inter', sans-serif;
-}
 #about{
     margin: 60px;}
 </style>

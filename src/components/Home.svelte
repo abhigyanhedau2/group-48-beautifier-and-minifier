@@ -7,7 +7,6 @@
     dispatch("changePage", language);
   };
 </script>
-<body>
 <div>
   <div class="container">
   <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -51,7 +50,6 @@
   </div>
   <About />
 </div>
-</body>
 
 <style>
   .container{
@@ -104,9 +102,6 @@ img{
   margin-bottom: 22px;
   height:130px;
   width:130px;
-}
-body {
-  font-family: 'Inter', sans-serif; /* Apply the Inter font to the body element */
 }
 label{
   display:flex;
